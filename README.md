@@ -1,4 +1,4 @@
-# NCU introduciton to Machine Learning
+# NCU Introduction to Machine Learning
 
     A Homework runner For NCU's introduction to machine learning
 
