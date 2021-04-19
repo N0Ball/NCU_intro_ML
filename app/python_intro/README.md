@@ -48,11 +48,11 @@ a = input().split()
 
 ```python
 print('')
-date = super().getInput('Date: ')
+date = input('Date: ')
 
-calories = list(map(lambda x: int(x), super().getInput("Calories: ").split(',')))
+calories = list(map(lambda x: int(x), input("Calories: ").split(',')))
 
-super().getOutput(f"{date}日期的卡路里總和是{sum(calories)}")
+print(f"{date}日期的卡路里總和是{sum(calories)}")
 ```
 
 <br/>
@@ -72,17 +72,17 @@ super().getOutput(f"{date}日期的卡路里總和是{sum(calories)}")
 ```python
 while True:
 
-    oper = super().getInput("Continue? (Yes/No): ")
+    oper = input("Continue? (Yes/No): ")
 
     if oper == 'Yes':
-        super().getOutput("Continue")
+        print("Continue")
         continue
 
     if oper == "No":
-        super().getOutput("End")
+        print("End")
         break
 
-    super().getOutput("Please type again")
+    print("Please type again")
 ```
 <br/>
 <div align="right">
@@ -111,26 +111,26 @@ print(eval('3 + 3')) # 6
 [Code](calculator.py)
 
 ```python
-first_number = super().getInput("First Number: ")
+first_number = input("First Number: ")
 if not first_number.isdigit():
-    super().getOutput("number not digit, please type again")
+    print("number not digit, please type again")
     self.run(self)
     return
 
-operation = super().getInput("Operation: ")
+operation = input("Operation: ")
 if operation not in "+ - * / % // **".split():
-    super().getOutput("operation not permitted, please type again")
+    print("operation not permitted, please type again")
     self.run(self)
     return
 
-second_number = super().getInput("Second Number: ")
+second_number = input("Second Number: ")
 if not second_number.isdigit():
-    super().getOutput("number not digit, please type again")
+    print("number not digit, please type again")
     self.run(self)
     return
 
 
-super().getOutput(eval(first_number + operation + second_number))
+print(eval(first_number + operation + second_number))
 ```
 
 <br/>
@@ -155,7 +155,7 @@ members = []
 
 while True:
 
-    user_input = self.getInput('Name: ')
+    user_input = input('Name: ')
 
     if ' ' == user_input:
         continue 
@@ -167,7 +167,7 @@ while True:
 
 
 rand = int.from_bytes(urandom(10), sys.byteorder)%len(members)
-self.getOutput(f"今天是{members[rand]}倒垃圾")
+print(f"今天是{members[rand]}倒垃圾")
 ```
 
 <br/>
@@ -189,10 +189,10 @@ from os import urandom
 rand = int(urandom(1).hex(), 16) % 4 + 1
 count = 1
 
-while True if int(self.getInput("Guess number: ")) != rand else False:
+while True if int(input("Guess number: ")) != rand else False:
     count += 1
 
-self.getOutput(f'Time guessed: {count}\nRight answer: {rand}')
+print(f'Time guessed: {count}\nRight answer: {rand}')
 ```
 <br/>
 <div align="right">
@@ -210,10 +210,10 @@ self.getOutput(f'Time guessed: {count}\nRight answer: {rand}')
 
 ```python
 while True:
-    user_input = self.getInput("Guess number: ")
+    user_input = input("Guess number: ")
     
     if not user_input.isdigit():
-        self.getOutput("Wrong input, please type again")
+        print("Wrong input, please type again")
         continue
 
     user_input = int(user_input)
@@ -221,11 +221,11 @@ while True:
     if user_input == rand:
         break
 
-    self.getOutput('Too big') if user_input > rand else self.getOutput('Too small')
+    print('Too big') if user_input > rand else print('Too small')
 
     count += 1
 
-self.getOutput(f'Time guessed: {count}\nRight answer: {rand}')
+print(f'Time guessed: {count}\nRight answer: {rand}')
 ```
 
 <br/>
